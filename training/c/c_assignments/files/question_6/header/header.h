@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#define MAX 128
+
+struct EH {
+	unsigned char e_ident[16];
+	short e_type;
+	short e_machine;
+	int e_version;
+	unsigned int e_entry;
+};
+
+int is_valid(char s[]);
+
+void rem_ent(char *str);
+
+int str_len(char *ch);

@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+MAX	header/header.h	4;"	d
+NODE	header/header.h	/^} NODE; $/;"	t	typeref:struct:node
+count	header/header.h	/^int count;$/;"	v
+create	source/create.c	/^void create(NODE *n[count])$/;"	f
+data	header/header.h	/^	int data;$/;"	m	struct:node
+display	source/display.c	/^void display(void)$/;"	f
+head	header/header.h	/^struct node *head;$/;"	v	typeref:struct:node
+insert_at_begining	source/insert_at_begining.c	/^void insert_at_begining(void)$/;"	f
+is_valid	source/is_valid.c	/^int is_valid(char s[])$/;"	f
+link	header/header.h	/^	struct node *link;$/;"	m	struct:node	typeref:struct:node::node
+main	source/linkedlist.c	/^int main()$/;"	f
+n	header/header.h	/^NODE *n[MAX];$/;"	v
+node	header/header.h	/^typedef struct node  {$/;"	s
+rem_ent	source/rem_ent.c	/^void rem_ent(char *str)$/;"	f
+str_len	source/str_len.c	/^int str_len(char *ch)$/;"	f
+temp	header/header.h	/^struct node *temp;$/;"	v	typeref:struct:node

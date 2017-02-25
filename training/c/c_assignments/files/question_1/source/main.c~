@@ -1,0 +1,25 @@
+#include"header.h"
+
+int main()
+{
+	FILE *fp;
+	char ch;
+	fp = fopen("text.txt","r+");
+	
+	if(fp == NULL)
+		printf("\nNo file to open");
+	
+	while(ch != EOF)  {
+		ch = fgetc(fp);
+		if((ch >= 'A') && (ch <= 'Z')){
+			ch = ch ^ 32;
+			fseek(fp,-1,SEEK_CUR);
+			fputc(ch,fp);
+		}
+	}
+
+	fclose(fp);
+	return 0;
+}
+		
+	

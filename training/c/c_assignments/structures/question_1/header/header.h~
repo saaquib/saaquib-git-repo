@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#pragma pack (1)
+
+struct frame1 
+{
+
+	int HEC:8;
+	int CLP:1;
+	int PTI:3;
+	int VCI:16;
+	int VPI:8;
+	int GFC:4;
+};
+
+struct frame2
+{
+	int SourcePort : 16;
+	int DestinationPort : 16;
+	int SequenceNumber;
+	int AcknowledgeNumber;
+	int HeaderLength : 4;
+	int Reserved : 6;
+	int CodeBit : 6;
+	int Window : 16;
+	int Checksum : 16;
+	int Urgent : 16;
+	
+}	
+	
+	
+	
+	
+	
+	
+};
+
+struct frame3
+{
+	
+}
+
+
+
+

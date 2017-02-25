@@ -1,0 +1,21 @@
+#include"myelfheader.h"
+
+int main(int argc, char *argv[])
+{
+	int i;
+	FILE *fp;
+	MyElf32_Ehdr ELF;
+	fp = fopen ( argv[1],"r");
+	perror (argv[1]);
+
+	fread (&ELF, 52, 1, fp);
+	for (i = 0; i < EI_NIDENT; i++) {
+		printf("%x\t",ELF.e_myident[i]);
+	}
+
+	fclose(fp);
+	return 0;
+}
+
+
+

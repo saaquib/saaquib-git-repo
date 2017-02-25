@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+#define MAX 32
+#define MEM_CREATE (NODE*)malloc(sizeof(NODE))
+#define IS_MEM_ALLOC(str) if((!str)) {\
+				printf("\nmem not allocated");\
+				exit(1);\
+				}
+
+int str_len(char *);
+void rem_ent(char *);
+int is_valid(char *);
+
+typedef struct node  {
+	int data;
+	struct node *left;
+	struct node *right;
+} NODE; 
+
+NODE* create(void);
+
+void insert(NODE *);
+
+void pre_order(NODE *);
+void post_order(NODE *);
+void in_order(NODE *);
+
+
+
+
+struct node *root;
+struct node *temp;
+
+
+

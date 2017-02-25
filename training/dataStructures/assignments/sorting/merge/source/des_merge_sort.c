@@ -1,0 +1,17 @@
+#include"header.h"
+
+void des_merge_sort(int *arr, int low, int high)
+{
+	int mid;
+	if(low < high)
+	{
+		mid = (low + high) / 2;
+		des_merge_sort(arr, low, mid );
+		des_merge_sort(arr, mid + 1, high);
+		des_merge(arr, low, mid, high);
+	}
+	else
+		return;
+}
+	
+

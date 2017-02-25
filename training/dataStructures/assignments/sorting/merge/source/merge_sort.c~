@@ -1,0 +1,17 @@
+#include"header.h"
+
+int merge_sort(int *arr, int low, int high)
+{
+	int mid;
+	if(low < high)
+	{
+		mid = (low + high) / 2;
+		merge_sort(arr, low, mid );
+		merge_sort(arr, mid + 1, high);
+		asc_merge(arr, low, mid, high);
+	}
+	else
+		return 0;
+}
+	
+

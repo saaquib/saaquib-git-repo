@@ -1,0 +1,20 @@
+#include"header.h"
+#include<string.h>
+int str_spn(char *s1,char *s2)
+{
+	int i = 0;
+	static int j = 0;
+	int count = 0;
+	int l1 = str_len(s1);
+	int l2 = str_len(s2);
+	
+	while((*(s2 + i) != '\0') && (*(s1 + j) != '\0'))  {
+		if(*(s2 + i) == *(s1 + j)) {
+			j++;
+			i++;
+		}
+		else j++;
+	}
+	printf("\n %d",i);
+	return i;		
+}

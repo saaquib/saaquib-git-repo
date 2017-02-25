@@ -1,0 +1,9 @@
+#include<stdio.h>
+
+#define MAX 32
+
+void swap(int *, int *);
+
+void asc_bubble_sort(int *, int);
+
+void asc_bubble_sort(int *, int);

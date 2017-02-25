@@ -1,0 +1,22 @@
+void showbits(int c)
+{       
+        int i;
+        int count=0;
+        i=sizeof(int)*8;
+        for(;i>0;i--)
+        {
+                printf("%d",(1&(c>>(i-1))));
+                count++;
+                if(count%8==0)
+                        printf(" ");
+                
+        }
+}
+
+int getsbit(int num,int s)
+{
+        int res;
+        res = (1<<(s-1)) & x;
+        return res;
+}
+

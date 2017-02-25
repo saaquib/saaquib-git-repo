@@ -1,0 +1,1 @@
+cmd_/home/saaquibh/training/os/thread/fd_descriptor_f/kmod.ko := ld -r -m elf_i386 -T ../scripts/module-common.lds --build-id  -o /home/saaquibh/training/os/thread/fd_descriptor_f/kmod.ko /home/saaquibh/training/os/thread/fd_descriptor_f/kmod.o /home/saaquibh/training/os/thread/fd_descriptor_f/kmod.mod.o ;  true

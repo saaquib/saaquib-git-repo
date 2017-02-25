@@ -1,0 +1,48 @@
+#include"header.h"
+
+int main()
+{
+	struct EH a[2];
+	FILE *fp;
+	char buffer[MAX];
+	char ch_type[MAX];
+	char ch_machine[MAX];
+	char ch_version[MAX];
+	char ch_entry[MAX];
+	int i;
+
+	for(i = 0; i < 2; i++)  
+	{
+		printf("\nEnter a[%d].e_ident[16] : ",i);
+		fgets(a[i].e_ident,16,stdin);
+		rem_ent(a[i].e_ident);
+
+		printf("\nEnter a[%d].e_type : ",i);
+		fgets(ch_type,16,stdin);
+		rem_ent(ch_type);
+		a[i].e_type = is_valid(ch_type);
+
+		printf("\nEnter a[%d].e_machine : ",i);
+		fgets(ch_machine,16,stdin);
+		rem_ent(ch_machine);
+		a[i].e_machine = is_valid(ch_machine);
+		
+		printf("\nEnter a[%d].e_version : ",i);
+		fgets(ch_version,16,stdin);
+		rem_ent(ch_version);
+		a[i].e_version = is_valid(ch_version);
+		
+		printf("\nEnter a[%d].e_ident[16] : ",i);
+		fgets(ch_entry,16,stdin);
+		rem_ent(ch_entry);
+		a[i].e_entry = is_valid(ch_entry);
+	}
+		
+	fp = fopen("info.db","w+");
+	for(i = 0; i < 2; i++)
+	{
+		fwrite(&a[i],sizeof(struct EH),1,fp);
+		
+    }
+	return 0;
+}

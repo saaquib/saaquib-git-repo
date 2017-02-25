@@ -1,0 +1,69 @@
+#include "header.h"
+#include<string.h>
+int add1(int,int);
+int sub1(int,int);
+int mul1(int,int);
+int div1(int,int);
+
+int main(int argc,char *argv[])
+{
+	char *num1 = (char *)malloc(50*sizeof(char));
+	char *num2 = (char *)malloc(50*sizeof(char));
+	int number1;
+	int number2;	
+	char *ch = argv[1];
+
+	num1 = argv[2];
+	num2 = argv[3];
+	
+	printf("%s : ",ch);
+	number1 = atoi(num1);
+	number2 = atoi(num2);
+	
+	int (*fptr)(int number1,int number2);
+	if(strcmp(ch,"add") == 0)
+	fptr = add1;
+
+	else if(strcmp(ch,"sub") == 0)
+        fptr = sub1;
+
+	else if(strcmp(ch,"mul") == 0)
+        fptr = mul1;
+	
+	else if(strcmp(ch,"div") == 0)
+        fptr = div1;
+	
+	else{
+	printf("invalid\n");
+	return 0;
+	}
+	fptr(number1,number2);
+
+	return 0;
+}
+
+int add1(int number1,int number2)
+
+{
+
+	printf("%d\n",(number1+number2));
+	return 0;
+}
+int sub1(int num1,int num2)
+{
+        printf("%d\n",(num1-num2));
+        return 0;
+}
+int mul1(int num1,int num2)
+{
+        printf("%d\n",(num1*num2));
+        return 0;
+}
+int div1(int num1,int num2)
+{
+        printf("%f\n",((float)num1/(float)num2));
+        return 0;
+}
+
+
+

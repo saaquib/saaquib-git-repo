@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+#define MAX 32
+
+void swap(int *, int *);
+
+void des_insertion_sort(int *, int);
+
+void asc_insertion_sort(int *, int);
+

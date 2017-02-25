@@ -1,0 +1,21 @@
+#include"header.h"
+
+void delete_given_num(int num)
+{
+	NODE *traverse;
+	NODE *prev;	
+	traverse = head;
+	if (count == 0) {
+		printf("\n List is empty");
+	}
+	else {
+		while((traverse->data != num) && (traverse->link != NULL)) 
+			traverse = traverse->link;
+		if (traverse->data == num) {
+			prev = traverse;
+			traverse = traverse->link;
+		}
+		free(prev);
+		count--;
+	}
+}

@@ -1,0 +1,9 @@
+#include"header.h"
+
+int main()
+{
+	struct frame1 f1;
+	printf("%d\n", sizeof(f1));
+	return 0;
+}
+

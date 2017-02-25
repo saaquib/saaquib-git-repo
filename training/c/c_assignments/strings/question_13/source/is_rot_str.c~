@@ -1,0 +1,28 @@
+#include"header.h"
+
+int is_rot_str(char *str1, char *str2)
+{
+	int i,j;
+	int l1 = str_len(str1);
+	int l2 = str_len(str2);
+	char *t;
+	t = (char*)malloc(2*l1);
+	str_cpy(t,str1);
+	t = sappend(t,str1);
+	printf("\n%s",t);
+
+	j = str_spn(t,str2);
+		if(j == l1) printf("\nyes");
+	else printf("\nno");
+/*if(l1 != l2) printf("\n not a rotates string");
+	for(i= 0; i < (l1 - l2 - 1); i++)  {
+		if(str_case_cmp(str1,str2));
+		else  {
+			flag = 1;
+			break;
+		}
+		rotr_by_1(str1);
+	}
+
+	return flag; */
+}

@@ -1,0 +1,1 @@
+cmd_/home/saaquibh/training/os/thread/driverthread/kmod.ko := ld -r -m elf_i386 -T ../scripts/module-common.lds --build-id  -o /home/saaquibh/training/os/thread/driverthread/kmod.ko /home/saaquibh/training/os/thread/driverthread/kmod.o /home/saaquibh/training/os/thread/driverthread/kmod.mod.o ;  true

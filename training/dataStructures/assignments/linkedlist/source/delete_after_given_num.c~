@@ -1,0 +1,22 @@
+#include"header.h"
+
+void delete_after_given_num(int num)
+{
+	NODE *traverse;
+	NODE *prev;	
+	traverse = head;
+	while(traverse->data != num)
+	{
+		prev = traverse;
+		traverse = traverse->link;
+	}
+	prev = traverse;
+	traverse = traverse->link;
+	if(traverse->link == NULL)
+		printf("no elements");
+	else  
+	{
+		prev->link = traverse->link;
+		free(traverse);
+	}
+}

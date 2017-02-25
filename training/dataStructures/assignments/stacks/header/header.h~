@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+#define LIMIT 10
+
+#define MAX 32
+
+static int top = 0;
+
+void push();
+
+int pop();
+
+void rem_ent(char *);
+
+int str_len(char *ch);
+
+int is_valid(char s[]);
+
+extern int stack[LIMIT];

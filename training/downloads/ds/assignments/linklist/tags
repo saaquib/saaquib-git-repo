@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+MAX	header/header.h	4;"	d
+data	header/header.h	/^	int data;$/;"	m	struct:list
+display	src/display.c	/^void display(sl *head)$/;"	f
+insert	src/insert.c	/^sl *insert(sl *head)$/;"	f
+insertafter	src/insertafter.c	/^sl *insertafter(sl * head)$/;"	f
+insertat	src/insertat.c	/^sl *insertat(sl * head)$/;"	f
+insertbef	src/insertbef.c	/^sl *insertbef(sl * head)$/;"	f
+insertbeg	src/insertbeg.c	/^sl *insertbeg(sl *head)$/;"	f
+insertend	src/insertend.c	/^sl *insertend(sl *head)$/;"	f
+insertmid	src/insertmid.c	/^sl *insertmid(sl *head)$/;"	f
+list	header/header.h	/^typedef struct list {$/;"	s
+main	src/main.c	/^int main()$/;"	f
+next	header/header.h	/^	struct list *next;$/;"	m	struct:list	typeref:struct:list::list
+sl	header/header.h	/^}sl;$/;"	t	typeref:struct:list

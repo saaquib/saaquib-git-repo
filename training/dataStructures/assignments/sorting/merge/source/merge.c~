@@ -1,0 +1,42 @@
+#include"header.h"
+
+void merge(int *arr, int low, int mid, int high)
+{
+	int left[MAX];
+	int right[MAX];
+	int left_length = mid - low;
+	int right_length = high - mid;
+	int i;
+	int j;
+	int k;
+
+	for(i = 0; i < left_length; i++)
+	{
+		left[i] = arr[left_length + i];
+		printf("\n left[%d] : %d",i,left[i]);
+	}
+
+	for(j = 0; j < right_length; j++)
+	{
+		printf("\n right[%d] : %d",j,left[j]);
+		right[j] = arr[j + right_length + 1];
+	}
+
+	i = 0;
+	j = 0;
+	for(k = 0; k < high; k++)
+	{
+		if(left[i] <= right[j])
+		{
+			arr[k] = left[i++];
+			printf("\n left[%d] : %d",i,left[i]);
+		}
+		else
+		{
+			arr[k] = right[j++];
+			printf("\n left[%d] : %d",i,left[i]);
+		}
+	}
+}
+			
+

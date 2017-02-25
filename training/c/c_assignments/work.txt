@@ -1,0 +1,1 @@
+1. how to check whether the representation is little indian  or big indian 
